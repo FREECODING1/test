@@ -1,0 +1,77 @@
+.p-contact {
+  margin-top: 120px;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .p-contact {
+    width: 100%;
+  }
+}
+.p-contact__title {
+  font-size: 32px;
+  font-size: 3.2rem;
+  font-weight: bold;
+}
+@media screen and (max-width: 768px) {
+  .p-contact__title {
+    font-size: 24px;
+    font-size: 2.4rem;
+  }
+}
+.p-contact__text {
+  margin-top: 5px;
+  margin-bottom: 40px;
+  font-size: 18px;
+  font-size: 1.8rem;
+}
+@media screen and (max-width: 768px) {
+  .p-contact__text {
+    font-size: 16px;
+    font-size: 1.6rem;
+  }
+}
+.p-contact__button {
+  max-width: 780px;
+  width: 60%;
+  height: 66px;
+  border-radius: 40px;
+  margin: 0 auto;
+  background: #ff3300;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px;
+}
+@media screen and (max-width: 768px) {
+  .p-contact__button {
+    padding: 15px 30px;
+  }
+}
+.p-contact__button:hover {
+  color: #ff3300;
+  border: 1px solid #ff3300;
+  background: #fff;
+}
+.p-contact__lead {
+  color: #fff;
+  font-size: 28px;
+  font-size: 2.8rem;
+  font-weight: bold;
+  letter-spacing: 2.8px;
+}
+@media screen and (max-width: 768px) {
+  .p-contact__lead {
+    font-size: 24px;
+    font-size: 2.4rem;
+  }
+}
+.p-contact__lead:hover {
+  color: #ff3300;
+}/*# sourceMappingURL=contact.css.map */

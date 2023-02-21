@@ -1,0 +1,96 @@
+.p-work {
+  background-image:
+    radial-gradient(#ff3300 40%, transparent 20%),
+    radial-gradient(#ff3300 40%, transparent 20%);
+  background-color: #E8E8E8;
+  background-repeat: repeat;
+  background-position: 0 0, 120px 110px;
+  background-size: 230px 230px;
+  animation: p-work 10s infinite linear;
+
+  &__container {
+    width: 100%;
+    max-width: 860px;
+    height: auto;
+    margin: 0 auto;
+    padding: 40px 0;
+    @media screen and (max-width: 768px){
+      padding: 0 16px;
+    }
+  }
+
+  &__section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 32px 30px;
+    padding: 60px 30px;
+    margin: 0 auto;
+
+    @media screen and (max-width: 768px){
+      flex-direction: column;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 30px 0;
+    }
+  }
+
+  &__block {
+    text-align: center;
+    border-radius: 20px;
+    background: #fff;
+    animation: balloon 0.5s ease-out 0s 1 forwards;
+    padding: 16px;
+
+    @media screen and (max-width: 768px){
+      width: 100%;
+      padding: 20px;
+      &:not(:nth-child(1)){
+        margin-top: 30px;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 28px;
+    font-size: 2.8rem;
+    margin-top: 60px;
+
+    @media screen and (max-width: 768px){
+      font-size: 24px;
+      font-size: 2.4rem;
+      margin-top: 0;
+    }
+  }
+
+  &__subTitle {
+    font-size: 18px;
+    font-size: 1.8rem;
+    margin-top: 15px;
+
+    @media screen and (max-width: 768px){
+      font-size: 16px;
+      font-size: 1.6rem;
+    }
+  }
+
+  &__text {
+    width: 280px;
+    margin: 0 auto;
+    font-size: 16px;
+    font-size: 1.6rem;
+    padding-top: 30px;
+    text-align: left;
+    letter-spacing: 1.6px;
+  }
+}
+
+@keyframes p-work  {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -700px 700px;
+  }
+}

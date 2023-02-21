@@ -1,0 +1,10 @@
+.l-wrapper {
+
+  width: 100%;
+  display: block;
+  font-family: '遊ゴシック';
+
+  @media screen and (max-width: 768px){
+    width: 100%;
+  }
+}

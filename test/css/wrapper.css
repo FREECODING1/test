@@ -1,0 +1,11 @@
+@charset "UTF-8";
+.l-wrapper {
+  width: 100%;
+  display: block;
+  font-family: "遊ゴシック";
+}
+@media screen and (max-width: 768px) {
+  .l-wrapper {
+    width: 100%;
+  }
+}/*# sourceMappingURL=wrapper.css.map */

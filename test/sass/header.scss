@@ -1,0 +1,210 @@
+.l-header{
+
+  &__flame {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 30px;
+    width: 100%;
+  }
+
+  &__titleBox {
+    margin-top: 20px;
+    margin-left: 40px;
+    color: #ff3300;
+
+    @media screen and (max-width: 768px){
+      width: 100px;
+      line-height: 1px;
+      margin-top: 3px;
+      margin-left: 20px;
+    }
+  }
+
+  &__titleFont {
+    font-size: 50px;
+    font-size: 5rem;
+    font-weight: bold;
+    line-height: 1.2;
+    display: flex;
+
+    @media screen and (max-width: 768px){
+      font-size: 30px;
+      font-size: 3rem;
+      letter-spacing: 2;
+    }
+  }
+
+  &__titleText {
+    font-size: 16px;
+    font-size: 1.6rem;
+
+    @media screen and (max-width: 768px){
+      font-size: 10px;
+      font-size: 1rem;
+    }
+  }
+
+  &__line {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__menuBtn {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    height: 90px;
+    width: 90px;
+    justify-content: center;
+    align-items: center;
+    z-index: 90;
+    background-color: #ff3300;
+
+    @media screen and (max-width: 768px){
+      width: 75px;
+      height: 75px;
+    }
+  }
+
+  &__menuBtn span,
+  &__menuBtn span:before,
+  &__menuBtn span:after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 50px;
+    border-radius: 3px;
+    background-color: #ffffff;
+    position: absolute;
+    
+    @media screen and (max-width: 768px){
+      width: 35px;
+    }
+  }
+
+
+  &__menuBtn span:before {
+    bottom: 14px;
+  }
+
+  &__menuBtn span:after {
+    top: 14px;
+  }
+
+  #menu-btn-check:checked ~ &__menuBtn span {
+    background-color: #ff3300;/*メニューオープン時は真ん中の線を透明にする*/
+    //border: 1px solid #fff;
+  }
+  #menu-btn-check:checked ~ &__menuBtn span::before {
+    content: "";
+    bottom: 0;
+    transform: rotate(45deg);
+  }
+  #menu-btn-check:checked ~ &__menuBtn span::after {
+    content: "";
+    top: 0;
+    transform: rotate(-45deg);
+  }
+  
+  &__menuContent {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    z-index: 80;
+    background-color: #ff3300;
+    transition: all 0.5s;
+  }
+  
+  #menu-btn-check:checked ~ &__menuContent {
+    left: 0;/*メニューを画面内へ*/
+  }
+
+  &__list {
+    padding: 70px 10px 0;
+    margin-top: 30px;
+    margin-bottom: 40px;
+  }
+
+  &__tag {
+    text-align: center;
+
+    & > a {
+      display: block;
+      width: 100%;
+      font-size: 16px;
+      font-size: 1.6rem;
+      font-weight: bold;
+      box-sizing: border-box;
+      color:#ffffff;
+      text-decoration: none;
+      padding: 9px 15px 10px 0;
+      position: relative;
+    }
+
+    & > a::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      transform: rotate(45deg);
+      position: absolute;
+      right: 11px;
+      top: 16px;
+    }
+  }
+
+  &__menuTitle {
+    color: #fff;
+    margin-top: 25px;
+    margin-left: 25px;
+  }
+
+  &__menuFont {
+    display: flex;
+    font-size: 40px;
+    font-size: 4rem;
+    font-weight: bold;
+  }
+
+  &__menuText {
+    font-size: 13px;
+    font-size: 1.3rem;
+  }
+
+  &__menuBox {
+    text-align: center;
+    width: 250px;
+    height: 50px;
+    border-top: 1px solid #fff;
+    border-right: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    border-left: 1px solid #fff;
+    margin: 0 auto;
+  }
+
+  &__menuBox::before {
+    content: "";
+    border-right:1px solid #fff;
+    border-bottom:1px solid #fff;
+    padding-bottom: 50px;
+    padding-left: 230px;
+    margin-left: 30px;
+  }
+
+  &__menuLead {
+    color: #fff;
+    text-align: center;
+    font-size: 15px;
+    font-size: 1.5rem;
+    letter-spacing: 1.6px;
+    margin: auto;
+  }
+}
+
+#menu-btn-check {
+  display: none;
+}
+
+
